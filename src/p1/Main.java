@@ -9,7 +9,7 @@ Program to simulate ordering sandwiches at Jimmy John's
 Demo Program for CIS 150
 Henry Peffley
 21Jan2016
-Version 0.1
+Version 1.0
  */
 public class Main {
 
