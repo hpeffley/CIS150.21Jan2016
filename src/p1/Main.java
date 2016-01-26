@@ -17,7 +17,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         char option;
-        double price = 0;
+        double price = 0, itemAmount;
 
         System.out.println("Welcome to Jimmy John's\nWhat would you like?");
         do {
@@ -37,31 +37,45 @@ public class Main {
             //Store the first letter in a char
             option = choice.charAt(0);
 
+          //  if (choice != )
+           // System.out.println("How many of this item would you like?");
+          //  double itemAmount = input.nextDouble();
+
+
+
             // Switch based on the option
             switch (option) {
                 //Ham
                 case 'H':
-                    price += 6.50;
+                    System.out.println("How many of this item would you like?");
+                    itemAmount = input.nextDouble();
+                    price += 6.50 * itemAmount;
                     break;
 
                 //Roast Beef
                 case 'R':
-                    price += 6.75;
+
+                    System.out.println("How many of this item would you like?");
+                    itemAmount = input.nextDouble();
+                    price += 6.75 * itemAmount;
                     break;
 
                 //Salami
                 case 'S':
-                    price += 6.25;
+                    System.out.println("How many of this item would you like?");
+                    itemAmount = input.nextDouble();
+                    price += 6.25 * itemAmount;
                     break;
 
                 //Tuna
                 case 'T':
-                    price += 5.50;
+                    System.out.println("How many of this item would you like?");
+                    itemAmount = input.nextDouble();
+                    price += 5.50 * itemAmount;
                     break;
 
                 //done
                 case 'D':
-                    price += 0;
                     break;
 
                 default:
@@ -69,8 +83,9 @@ public class Main {
                     price += 0;
             }
 
+
             System.out.println("You chose: " + choice);
-            System.out.println("Cost: $" + price + "0");
+            System.out.println("Your current order total is: $" + price + "0");
 
         } while (option != 'D');
         System.out.println("Thank you for choosing Jimmy John's");
