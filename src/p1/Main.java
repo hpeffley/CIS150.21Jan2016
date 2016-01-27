@@ -17,7 +17,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         char option;
-        double price = 0, itemAmount;
+        double price = 0, itemAmount, runningTotal = 0;
 
         System.out.println("Welcome to Jimmy John's\nWhat would you like?");
         do {
@@ -50,6 +50,7 @@ public class Main {
                     System.out.println("How many of this item would you like?");
                     itemAmount = input.nextDouble();
                     price += 6.50 * itemAmount;
+                    runningTotal += price;
                     break;
 
                 //Roast Beef
@@ -58,6 +59,7 @@ public class Main {
                     System.out.println("How many of this item would you like?");
                     itemAmount = input.nextDouble();
                     price += 6.75 * itemAmount;
+                    runningTotal += price;
                     break;
 
                 //Salami
@@ -65,6 +67,7 @@ public class Main {
                     System.out.println("How many of this item would you like?");
                     itemAmount = input.nextDouble();
                     price += 6.25 * itemAmount;
+                    runningTotal += price;
                     break;
 
                 //Tuna
@@ -72,6 +75,7 @@ public class Main {
                     System.out.println("How many of this item would you like?");
                     itemAmount = input.nextDouble();
                     price += 5.50 * itemAmount;
+                    runningTotal += price;
                     break;
 
                 //done
@@ -85,7 +89,7 @@ public class Main {
 
 
             System.out.println("You chose: " + choice);
-            System.out.println("Your current order total is: $" + price + "0");
+            System.out.println("Your current order total is: $" + runningTotal + "0");
 
         } while (option != 'D');
         System.out.println("Thank you for choosing Jimmy John's");
